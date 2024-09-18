@@ -1,0 +1,28 @@
+version: 0.2
+
+env:
+  variables:
+    DOCKER_IMAGE_NAME: "my-note-app"
+
+phases:
+  pre_build:
+    commands:
+      - echo "Cloning the code"
+      - git clone https://github.com/Sheheriyar99/django-notes-app.git
+      - cd django-notes-app
+
+  build:
+    commands:
+      - echo "Building Docker image"
+      - docker build -t $DOCKER_IMAGE_NAME .
+
+  post_build:
+    commands:
+      - echo "Deploying the container"
+      - docker-compose up -d
+
+artifacts:
+  files:
+    - '**/*'  # Include all files, or you can specify particular files or directories
+  base-directory: 'django-notes-app'  # This ensures artifacts are gathered from the right directory
+  discard-paths: yes  # You can set this to 'no' if you want to preserve the file paths in the S3 bucket
