@@ -2,15 +2,15 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/django-notes-app  # You can adjust the destination directory
+    destination: /home/ubuntu/django-notes-app  # You can adjust the destination directory
 
 hooks:
   AfterInstall:
     - location: scripts/docker-start.sh  # Script to start Docker services
       timeout: 300
-      runas: ec2-user
+      runas: root
 
   ApplicationStart:
     - location: scripts/docker-deploy.sh  # Script to deploy Docker container
       timeout: 300
-      runas: ec2-user
+      runas: root
