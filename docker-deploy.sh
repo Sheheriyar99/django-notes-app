@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Navigate to the project directory
-cd /home/ec2-user/django-notes-app || exit
+cd /home/ubuntu/django-notes-app || exit
 
 # Pull the latest Docker image and run the container
 echo "Deploying Docker container using docker-compose..."
