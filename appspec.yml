@@ -6,11 +6,11 @@ files:
 
 hooks:
   AfterInstall:
-    - location: scripts/docker-start.sh  # Script to start Docker services
+    - location: docker-start.sh  # Script to start Docker services
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: scripts/docker-deploy.sh  # Script to deploy Docker container
+    - location: docker-deploy.sh  # Script to deploy Docker container
       timeout: 300
       runas: root
