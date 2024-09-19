@@ -14,7 +14,7 @@ phases:
   build:
     commands:
       - echo "Building Docker image"
-      - docker build -t $DOCKER_IMAGE_NAME .
+      - docker build -t my-note-app:latest .
 
   post_build:
     commands:
