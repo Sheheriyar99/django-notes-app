@@ -22,4 +22,4 @@ phases:
 artifacts:
   files:
     - '**/*'  # Include all files, or you can specify particular files or directories
-  discard-paths: yes  # You can set this to 'no' if you want to preserve the file paths in the S3 bucket
+  discard-paths: yes  # You can set this to 'no' if you want to preserve the file paths in the S3 bucket 
