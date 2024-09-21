@@ -15,7 +15,7 @@ phases:
 
   post_build:
     commands:
-      - echo "Deploying the container"
+     # - echo "Deploying the container"
      # - docker-compose down
      # - docker-compose up -d
 
