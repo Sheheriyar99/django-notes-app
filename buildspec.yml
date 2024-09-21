@@ -7,9 +7,6 @@ env:
 phases:
   pre_build:
     commands:
-      - echo "Cloning the code"
-      - git clone https://github.com/Sheheriyar99/django-notes-app.git
-      - cd django-notes-app
 
   build:
     commands:
@@ -19,8 +16,8 @@ phases:
   post_build:
     commands:
       - echo "Deploying the container"
-      - docker-compose down
-      - docker-compose up -d
+     # - docker-compose down
+     # - docker-compose up -d
 
 artifacts:
   files:
