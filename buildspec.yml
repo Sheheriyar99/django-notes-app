@@ -22,5 +22,4 @@ phases:
 artifacts:
   files:
     - '**/*'  # Include all files, or you can specify particular files or directories
-  base-directory: 'django-notes-app'  # This ensures artifacts are gathered from the right directory
   discard-paths: yes  # You can set this to 'no' if you want to preserve the file paths in the S3 bucket
